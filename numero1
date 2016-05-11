@@ -1,0 +1,72 @@
+group: My player("autobus")
+-- Trata sobre las carreras de autobuses en busca de pasajeros si cumple las reglas o si llega al tiempo se da bonus algo parecido al crasy taxi.El objetivo es crear tu propia empresa.El juego transcure dentro de una competencia de empresas haciendo que tienes que llegar a los paraderos más rapido que otro (hay multiples caminos donde algunos no te llevan a nada tu cobrador(maquina) te ayuda a decidir).Como todo carro tiene que pagar lo que cuesta un caro(conbustible y pagar al cobrador ).
+GAME ={
+	ID_game:string , Date:string , Num_car:number ,ID_player:string ,Money:number
+	A1214    			 , 01-12-25    ,1							  ,A121							, 000000
+	A1225  				 ,02-12-20		 ,2  							,A122							, 000000
+	A1216					 ,02-12-20		 ,2								,A121							, 400000
+	A1237					 ,04-12-21	   ,4								,A123							, 000000
+	A1241					 ,01-11-09     ,1               ,A124							, 000000
+  A1250          ,03-13-04     ,2               ,A125             , 000000
+	A1249					 ,02-11-10		 ,3               ,A124							, -2000				
+	A1238					 ,10-13-14   	 ,6               ,A123							, 4000
+	A1232					 ,01-13-11		 ,5               ,A123							, -2000
+	A1239					 ,01-13-12		 ,5               ,A123							, 000000
+	A1213					 ,12-12-25   	 ,3               ,A121							, 000000
+	A1220					 ,03-12-21		 ,4               ,A122							, -200
+	A1247					 ,04-12-31		 ,4               ,A124							, 1300
+	A1246					 ,04-12-20		 ,5               ,A124							, 300
+	A1253					 ,03-13-10		 ,3               ,A125							, 4000
+	A1256					 ,03-13-11     ,5								,A125							, -2000
+	     }
+PLAYER_1={
+	ID_player:string ,Num_car:number, Username:string
+	A121             ,3							,Juan						
+	A122             ,4							,Luis						
+	A123             ,6							,Katy						
+	A124             ,5							,Rafael					
+	A125						 ,5							,Rosa						 
+}
+AUTO = {
+ID_player:string,Make:string ,Model:string , Intel:string  ,Costo:number
+	A121          ,Toyota_M     ,clasico       ,si					 , 5500
+	A121          ,Toyota_M			,moderno			 ,no					 , 6500
+	A124          ,Toyota_M			,clasico			 ,si					 , 5500
+	A124          ,Toyota_M			,normal				 ,no           , 5300
+	A123          ,Toyota_M     ,moderno			 ,no					 , 6500
+	A121          ,Feord_A			,juvenil			 ,no           , 5000
+	A124					,Feord_A			,normal				 ,no           , 4500
+	A124					,Feord_A			,normal				 ,no           , 4500
+	A122          ,Feord_A			,normal        ,no					 , 4500
+	A123          ,Feord_A		  ,normal				 ,no					 , 4500
+	A122          ,Datsun_B			,moderno			 ,si					 , 8500
+	A125					,Datsun_B     ,moderno			 ,no					 , 6500
+	A122          ,Toyoda				,normal				 ,no					 , 6500
+	A123          ,Toyoda				,normal				 ,si					 , 7500
+	A123          ,Toyoda			  ,normal				 ,no					 , 6500
+	A125					,Toyoda	      ,moderno			 ,no					 , 7000
+	A125					,Toyoda				,moderno			 ,si					 , 8500
+	A123          ,Ferrari_B		,moderno			 ,si					 , 5999
+	A125					,Ferrari_B    ,normal				 ,no           , 4797
+	A122          ,Mazda_T			,normal				 ,no           , 5000
+	A123          ,Mazda_T      ,normal				 ,no           , 5000
+	A125					,Mazda_T			,normal				 ,no           , 5000
+	A124					,Mazda_T			,clasico			 ,no           , 4500
+}
+-- cobrador = C y R = relacion
+R_C ={ 
+ID_cobrador:string ,ID_player:string
+W001							 ,A121
+W003							 ,A122
+W005							 ,A123
+W007							 ,A124
+W001							 ,A125
+}
+
+COBRADOR ={
+	ID_cobrador:string ,Descripcion:string ,Cuesta_c:number
+	w001							 ,Positiva					 ,13
+	w003               ,Amigable					 ,11
+	w005							 ,Afortunado				 ,17
+	w005							 ,Veloz   					 ,19
+}
