@@ -1,0 +1,8 @@
+PLAYER_1={
+	ID_player:string ,Num_car:number, Username:string
+	A121             ,3							,Juan						
+	A122             ,4							,Luis						
+	A123             ,6							,Katy						
+	A124             ,5							,Rafael					
+	A125						 ,5							,Rosa						 
+}
